@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trips to Africa</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #f9f7f2;
+            }
+            
+            header {
+                background-color: #4a6741;
+                color: white;
+                padding: 20px;
+                border-radius: 8px;
+                margin-bottom: 30px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            
+            h1 {
+                margin: 0;
+                font-size: 2.5rem;
+                text-align: center;
+            }
+            
+            .trips-container {
+                background-color: white;
+                border-radius: 8px;
+                padding: 25px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            
+            ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            
+            li {
+                padding: 15px;
+                margin-bottom: 10px;
+                border-left: 4px solid #e8b54a;
+                background-color: #fff9eb;
+                border-radius: 0 8px 8px 0;
+                transition: transform 0.2s, box-shadow 0.2s;
+            }
+            
+            li:hover {
+                transform: translateX(5px);
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+            
+            @media (max-width: 768px) {
+                body {
+                    padding: 10px;
+                }
+                
+                h1 {
+                    font-size: 2rem;
+                }
+                
+                .trips-container {
+                    padding: 15px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Discover Africa Trips</h1>
+        </header>
+        
+        <div class="trips-container">
+            <ul>
+                {% for trip in trips %}
+                    <li>{{ trip }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </body>
+</html>
